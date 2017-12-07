@@ -7,12 +7,18 @@ module.exports = {
     context: __dirname,
 
     entry: {
-        main: ['main/js/main', 'main/less/main.less'],
+        main: ['main/js/main', 'main/less/main.scss'],
         vendor: [
-            'react',
-            'react-dom',
+            'jquery',
+            'jquery.easing',
+            'popper.js',
+            'bootstrap',
+            'bootstrap-switch',
+            'magnific-popup',
+            'moment',
+            'globals/creative.js',
             'globals/index.js',
-            'globals/index.less'
+            'globals/index.scss'
         ]
     }, // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
 
@@ -27,7 +33,11 @@ module.exports = {
         // new webpack.optimize.UglifyJsPlugin(),
         new BundleTracker({filename: './webpack-stats.json'}),
         new webpack.ProvidePlugin({
-
+            $: 'jquery',             // bootstrap requires
+            jQuery: 'jquery',
+            Popper: ['popper.js', 'default'],      // bootstrap requires
+            moment: 'moment',
+            ScrollReveal: 'scrollreveal',
         }),
         new ExtractTextPlugin('[name]-[hash].css'),
         new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor-[hash].js', Infinity}),
@@ -39,11 +49,11 @@ module.exports = {
         rules: [
             {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader'}, // to transform JSX into JS
             {
-                test: /\.less$/,
-                loader: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader!less-loader"})
+                test: /\.scss/,
+                loader: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader!sass-loader!resolve-url-loader!sass-loader?sourceMap"})
             }, //to transform less into CSS
             {test: /\.(jpe|jpg|png|woff|woff2|eot|ttf|gif|svg)(\?.*$|$)/, loader: 'url-loader?limit=100000'},//changed the regex because of an issue of loading less-loader for font-awesome.
-            {test: /\.css$/, loader: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader"}) },
+            {test: /\.css$/, loader: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader"})},
         ],
     },
 
