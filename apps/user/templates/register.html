@@ -1,0 +1,26 @@
+{% extends 'Global.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+    <div class="col-md-6 mx-auto">
+        <h2>Sign up</h2>
+        <form method="post" action="{% url 'user_register' %}">
+            {% csrf_token %}
+            {% for field in signupform %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <small class="text-danger">{{ error }}</small>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <small class="text-danger">{{ signupform.non_field_errors }}</small>
+            <div class="g-recaptcha" data-sitekey="6LfIfDwUAAAAAMUvz8h5QanDaJKoDRu-Q4uwelzV"></div>
+            <hr>
+            <button class="btn btn-primary" type="submit">Sign up</button>
+        </form>
+    </div>
+{% endblock %}

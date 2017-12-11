@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+
 from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -43,7 +44,8 @@ INSTALLED_APPS = [
     'social.apps.django_app.default',
     'social_django',
     'django.contrib.humanize',
-    'wow88strategy',
+    'apps.wow88strategy',
+    'apps.user',
 ]
 
 MIDDLEWARE = [

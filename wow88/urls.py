@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^', include('wow88strategy.urls'))
+    url(r'^', include('apps.wow88strategy.urls')),
+    url(r'^user/', include('apps.user.urls'))
 ]

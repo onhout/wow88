@@ -1,0 +1,11 @@
+{% extends 'Global.html' %}
+{% load render_bundle from webpack_loader %}
+{% block title %}Main Page{% endblock %}
+{% block main_page %}
+    {% include 'mainpages/header.html' %}
+    {% include 'mainpages/about.html' %}
+    {% include 'mainpages/trading_system.html' %}
+    {% include 'mainpages/markets.html' %}
+    {% include 'mainpages/team.html' %}
+    {% include 'mainpages/contact_us.html' %}
+{% endblock %}

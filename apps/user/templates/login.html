@@ -1,0 +1,38 @@
+{% extends 'Global.html' %}
+{% block content %}
+    <div class="col-md-6 mx-auto">
+        <p class="login-box-msg text-center">Sign in to start your session</p>
+        <form action="{% url 'user_login' %}" method="post">
+            {% csrf_token %}
+            {% for field in loginform %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <div class="invalid-feedback">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <small class="text-danger">{{ loginform.non_field_errors }}</small>
+            <div class="form-group">
+                <a href="{% url 'user_register' %}">First time? Register here.</a>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p>Or if you have the following:</p>
+                <a href="#"
+                   class="btn btn-block btn-social btn-facebook" role="button"><i
+                        class="fa fa-facebook"></i><span class="hidden-xs"> Sign in with Facebook</span></a>
+                <a href="#"
+                   class="btn btn-block btn-social btn-google" role="button"><i
+                        class="fa fa-google"></i><span class="hidden-xs"> Sign in with Google</span></a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
