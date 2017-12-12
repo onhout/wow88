@@ -18,7 +18,6 @@ from decouple import config
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -29,7 +28,6 @@ SECRET_KEY = 'ayf1*35ekvu4k)!#q=2taobiw=i3ty$-$^+0cs7etw1dnl)$vv'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -83,7 +81,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'wow88.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -93,7 +90,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -113,7 +109,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -125,7 +120,6 @@ USE_I18N = True
 
 USE_L10N = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
@@ -135,8 +129,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     os.path.join(os.path.abspath(os.path.dirname(__file__) + '/..'), 'static'),
 ]
-
-
 
 WEBPACK_LOADER = {
     'DEFAULT': {
@@ -153,9 +145,9 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-LOGIN_URL = '/'
-LOGOUT_URL = '/logout'
-LOGIN_REDIRECT_URL = '/home'
+LOGIN_URL = '/user/login'
+LOGOUT_URL = '/user/logout'
+LOGIN_REDIRECT_URL = '/user/home'
 
 SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.social_details',
@@ -168,9 +160,9 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
     'social.pipeline.user.user_details',
-    'mina.pipeline.check_if_profile_exist',  # custom
-    'mina.pipeline.get_profile_data',  # custom
-    'mina.pipeline.get_profile_avatar',  # custom
+    'apps.user.pipeline.check_if_profile_exist',  # custom
+    'apps.user.pipeline.get_profile_data',  # custom
+    'apps.user.pipeline.get_profile_avatar',  # custom
 )
 
 SOCIAL_AUTH_STRATEGY = 'social.strategies.django_strategy.DjangoStrategy'

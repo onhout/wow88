@@ -4,7 +4,8 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
-from apps.user.forms import SignUpForm, LoginForm
+from .decorators import user_profile_is_empty
+from .forms import SignUpForm, LoginForm, ProfileForm
 
 
 # Create your views here.
@@ -15,7 +16,6 @@ def user_login(request):
     else:
         if request.method == 'POST':
             loginform = LoginForm(data=request.POST)
-            print(loginform)
             if loginform.is_valid():
                 username = loginform.cleaned_data.get('username')
                 raw_password = loginform.cleaned_data.get('password')
@@ -24,7 +24,7 @@ def user_login(request):
                     login(request, user)
                     return redirect('user_home')
                 else:
-                    return render(request, 'login.html', {})
+                    return render(request, 'login.html', {'loginform': loginform})
         else:
             loginform = LoginForm()
         return render(request, 'login.html', {'loginform': loginform})
@@ -47,19 +47,34 @@ def user_register(request):
                     username = signupform.cleaned_data.get('username')
                     raw_password = signupform.cleaned_data.get('password1')
                     user = authenticate(username=username, password=raw_password)
-                    login(request, user)
-                    return redirect('user_home')
+                    if user is not None:
+                        login(request, user)
+                        return redirect('user_home')
+                    else:
+                        return render(request, 'register.html', {'signupform': signupform})
         else:
             signupform = SignUpForm()
         return render(request, 'register.html', {'signupform': signupform})
 
 
+@login_required
 def user_logout(request):
     auth_logout(request)
     return redirect('/')
 
 
 @login_required
+@user_profile_is_empty
 def user_home(request):
     return render(request, 'home.html', {
     })
+
+
+@login_required
+def user_profile(request):
+    if request.method == 'POST':
+        profileform = ProfileForm(request.POST, instance=request.user.profile)
+        if profileform.is_valid():
+            profileform.save()
+    profileform = ProfileForm(instance=request.user.profile)
+    return render(request, 'profile/profile.html', {'profileform': profileform})

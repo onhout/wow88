@@ -9,7 +9,7 @@ from django.dispatch import receiver
 class Profile(models.Model):
     USER_TYPE = [
         ('investor', 'Investor'),
-        ('sales', 'Sales'),
+        ('salesperson', 'Salesperson'),
         ('both', 'Both'),
     ]
     BROKER_CHOICE = [
@@ -19,11 +19,19 @@ class Profile(models.Model):
         ('optimis', 'Optimus'),
         ('stagefive', 'Stage Five'),
     ]
+    TRADING_EXPERIENCE = [
+        ('beginner', 'Beginner (< 1yr)'),
+        ('novice', 'Novice (< 2yrs)'),
+        ('intermediate', 'Intermediate (2-5 yrs)'),
+        ('advanced', 'Advanced (5+ yrs)'),
+        ('professional', 'Professional (10+ yrs)'),
+    ]
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
-    type = models.CharField(max_length=15, choices=USER_TYPE, default="investor")
+    type = models.CharField(max_length=15, choices=USER_TYPE)
     broker = models.CharField(max_length=100, choices=BROKER_CHOICE, blank=True, null=True)
-    referral_code = models.CharField(max_length=20)
-    trading_experience = models.CharField(max_length=10, blank=True, null=True)
+    referral_code = models.CharField(max_length=20, default='WEB_88')
+    trading_experience = models.CharField(max_length=20, choices=TRADING_EXPERIENCE, blank=True, null=True)
+    profile_photo = models.FileField(upload_to='./media/profile_pics', blank=True, null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
 

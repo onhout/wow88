@@ -30,7 +30,7 @@
                             <i class="fa fa-user"></i> User
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdown">
-                            <a class="dropdown-item" href="#">Basic Information</a>
+                            <a class="dropdown-item" href="{% url 'user_home' %}">User Profile</a>
                             <a class="dropdown-item" href="#">Contracts</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{% url 'user_logout' %}">
@@ -111,10 +111,10 @@
                     <div class="row">
                         <div class="col">
                             <p>Or if you have the following:</p>
-                            <a href="#"
+                            <a href="{% url 'social:begin' 'facebook' %}"
                                class="btn btn-block btn-social btn-facebook" role="button"><i
                                     class="fa fa-facebook"></i><span class="hidden-xs"> Sign in with Facebook</span></a>
-                            <a href="#"
+                            <a href="{% url 'social:begin' 'google-oauth2' %}"
                                class="btn btn-block btn-social btn-google" role="button"><i
                                     class="fa fa-google"></i><span class="hidden-xs"> Sign in with Google</span></a>
                         </div>

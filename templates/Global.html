@@ -22,6 +22,7 @@
 {% block main_page %}{% endblock %}
 <div class="container wrapper"
      style="margin-top: 85px;">
+    {% render_bundle 'vendor' 'js' %}
     {% block content %}{% endblock %}
 </div>
 <div class="errors"></div>
@@ -37,6 +38,5 @@
 {##}
 {#</script>#}
 
-{% render_bundle 'vendor' 'js' %}
 </body>
 </html>

@@ -7,7 +7,8 @@ module.exports = {
     context: __dirname,
 
     entry: {
-        main: ['main/js/main', 'main/less/main.scss'],
+        main: ['main/js/main', 'main/scss/main.scss'],
+        user: ['user/js/user', 'user/scss/user.scss'],
         vendor: [
             'jquery',
             'jquery.easing',
@@ -49,8 +50,11 @@ module.exports = {
         rules: [
             {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel-loader'}, // to transform JSX into JS
             {
-                test: /\.scss/,
-                loader: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader!sass-loader!resolve-url-loader!sass-loader?sourceMap"})
+                test: /\.(sass|scss)$/,
+                loader: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader!sass-loader!resolve-url-loader!sass-loader?sourceMap"
+                })
             }, //to transform less into CSS
             {test: /\.(jpe|jpg|png|woff|woff2|eot|ttf|gif|svg)(\?.*$|$)/, loader: 'url-loader?limit=100000'},//changed the regex because of an issue of loading less-loader for font-awesome.
             {test: /\.css$/, loader: ExtractTextPlugin.extract({fallback: "style-loader", use: "css-loader"})},

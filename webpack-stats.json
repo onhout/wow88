@@ -2,48 +2,70 @@
   "status": "done",
   "publicPath": "/static/dist/",
   "chunks": {
+    "user": [
+      {
+        "name": "user-e60c5351555d2e5bafb5.js",
+        "publicPath": "/static/dist/user-e60c5351555d2e5bafb5.js",
+        "path": "/home/onhout/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.js"
+      },
+      {
+        "name": "user-e60c5351555d2e5bafb5.css",
+        "publicPath": "/static/dist/user-e60c5351555d2e5bafb5.css",
+        "path": "/home/onhout/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.css"
+      },
+      {
+        "name": "user-e60c5351555d2e5bafb5.js.map",
+        "publicPath": "/static/dist/user-e60c5351555d2e5bafb5.js.map",
+        "path": "/home/onhout/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.js.map"
+      },
+      {
+        "name": "user-e60c5351555d2e5bafb5.css.map",
+        "publicPath": "/static/dist/user-e60c5351555d2e5bafb5.css.map",
+        "path": "/home/onhout/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.css.map"
+      }
+    ],
     "main": [
       {
-        "name": "main-eb9739caa4cefb13241a.js",
-        "publicPath": "/static/dist/main-eb9739caa4cefb13241a.js",
-        "path": "/Users/pl/Documents/wow88/static/dist/main-eb9739caa4cefb13241a.js"
+        "name": "main-e60c5351555d2e5bafb5.js",
+        "publicPath": "/static/dist/main-e60c5351555d2e5bafb5.js",
+        "path": "/home/onhout/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.js"
       },
       {
-        "name": "main-eb9739caa4cefb13241a.css",
-        "publicPath": "/static/dist/main-eb9739caa4cefb13241a.css",
-        "path": "/Users/pl/Documents/wow88/static/dist/main-eb9739caa4cefb13241a.css"
+        "name": "main-e60c5351555d2e5bafb5.css",
+        "publicPath": "/static/dist/main-e60c5351555d2e5bafb5.css",
+        "path": "/home/onhout/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.css"
       },
       {
-        "name": "main-eb9739caa4cefb13241a.js.map",
-        "publicPath": "/static/dist/main-eb9739caa4cefb13241a.js.map",
-        "path": "/Users/pl/Documents/wow88/static/dist/main-eb9739caa4cefb13241a.js.map"
+        "name": "main-e60c5351555d2e5bafb5.js.map",
+        "publicPath": "/static/dist/main-e60c5351555d2e5bafb5.js.map",
+        "path": "/home/onhout/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.js.map"
       },
       {
-        "name": "main-eb9739caa4cefb13241a.css.map",
-        "publicPath": "/static/dist/main-eb9739caa4cefb13241a.css.map",
-        "path": "/Users/pl/Documents/wow88/static/dist/main-eb9739caa4cefb13241a.css.map"
+        "name": "main-e60c5351555d2e5bafb5.css.map",
+        "publicPath": "/static/dist/main-e60c5351555d2e5bafb5.css.map",
+        "path": "/home/onhout/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.css.map"
       }
     ],
     "vendor": [
       {
-        "name": "vendor-eb9739caa4cefb13241a.js",
-        "publicPath": "/static/dist/vendor-eb9739caa4cefb13241a.js",
-        "path": "/Users/pl/Documents/wow88/static/dist/vendor-eb9739caa4cefb13241a.js"
+        "name": "vendor-e60c5351555d2e5bafb5.js",
+        "publicPath": "/static/dist/vendor-e60c5351555d2e5bafb5.js",
+        "path": "/home/onhout/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.js"
       },
       {
-        "name": "vendor-eb9739caa4cefb13241a.css",
-        "publicPath": "/static/dist/vendor-eb9739caa4cefb13241a.css",
-        "path": "/Users/pl/Documents/wow88/static/dist/vendor-eb9739caa4cefb13241a.css"
+        "name": "vendor-e60c5351555d2e5bafb5.css",
+        "publicPath": "/static/dist/vendor-e60c5351555d2e5bafb5.css",
+        "path": "/home/onhout/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.css"
       },
       {
-        "name": "vendor-eb9739caa4cefb13241a.js.map",
-        "publicPath": "/static/dist/vendor-eb9739caa4cefb13241a.js.map",
-        "path": "/Users/pl/Documents/wow88/static/dist/vendor-eb9739caa4cefb13241a.js.map"
+        "name": "vendor-e60c5351555d2e5bafb5.js.map",
+        "publicPath": "/static/dist/vendor-e60c5351555d2e5bafb5.js.map",
+        "path": "/home/onhout/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.js.map"
       },
       {
-        "name": "vendor-eb9739caa4cefb13241a.css.map",
-        "publicPath": "/static/dist/vendor-eb9739caa4cefb13241a.css.map",
-        "path": "/Users/pl/Documents/wow88/static/dist/vendor-eb9739caa4cefb13241a.css.map"
+        "name": "vendor-e60c5351555d2e5bafb5.css.map",
+        "publicPath": "/static/dist/vendor-e60c5351555d2e5bafb5.css.map",
+        "path": "/home/onhout/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.css.map"
       }
     ]
   }
