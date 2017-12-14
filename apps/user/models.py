@@ -27,9 +27,10 @@ class Profile(models.Model):
         ('professional', 'Professional (10+ yrs)'),
     ]
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
-    type = models.CharField(max_length=15, choices=USER_TYPE)
+    type = models.CharField(max_length=15, choices=USER_TYPE, default='investor')
+    potential = models.BooleanField(default=True)
     broker = models.CharField(max_length=100, choices=BROKER_CHOICE, blank=True, null=True)
-    referral_code = models.CharField(max_length=20, default='WEB_88')
+    referral_code = models.CharField(max_length=20)
     trading_experience = models.CharField(max_length=20, choices=TRADING_EXPERIENCE, blank=True, null=True)
     profile_photo = models.FileField(upload_to='./media/profile_pics', blank=True, null=True)
     updated_at = models.DateTimeField(auto_now=True)

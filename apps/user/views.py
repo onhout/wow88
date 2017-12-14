@@ -76,5 +76,9 @@ def user_profile(request):
         profileform = ProfileForm(request.POST, instance=request.user.profile)
         if profileform.is_valid():
             profileform.save()
+
+        if request.user.profile.potential:
+            return redirect('investors_signup')
+
     profileform = ProfileForm(instance=request.user.profile)
     return render(request, 'profile/profile.html', {'profileform': profileform})

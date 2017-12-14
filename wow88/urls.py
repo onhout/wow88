@@ -20,6 +20,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('apps.wow88strategy.urls')),
     url(r'^user/', include('apps.user.urls')),
+    url(r'^sales/', include('apps.sales.urls')),
+    url(r'^investors/', include('apps.investors.urls')),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url('', include('django.contrib.auth.urls', namespace='auth')),
 ]

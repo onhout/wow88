@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'apps.wow88strategy',
     'apps.user',
+    'apps.investors',
+    'apps.sales'
+
 ]
 
 MIDDLEWARE = [

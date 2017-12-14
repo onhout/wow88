@@ -1,4 +1,5 @@
 {% extends 'Global.html' %}
 {% block content %}
     <h2>Hello, {{ request.user }}</h2>
+    <a href="{% url 'user_profile' %}">Change profile</a>
 {% endblock %}

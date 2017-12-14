@@ -2,7 +2,7 @@
 {% load render_bundle from webpack_loader %}
 {% block content %}
     <div class="col-md-6 mx-auto">
-        {% if not request.user.profile.type %}
+        {% if not request.user.profile.referral_code %}
             <h2>Tell us a little bit about yourself.</h2>
         {% else %}
             <h2>User Profile</h2>

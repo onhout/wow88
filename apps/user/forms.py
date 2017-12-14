@@ -35,7 +35,7 @@ class LoginForm(AuthenticationForm):
 class ProfileForm(ModelForm):
     class Meta:
         model = Profile
-        exclude = ['user', 'updated_at', 'profile_photo']
+        exclude = ['user', 'updated_at', 'profile_photo', 'type', 'potential']
 
     def __init__(self, *args, **kwargs):
         super(ProfileForm, self).__init__(*args, **kwargs)
@@ -43,5 +43,5 @@ class ProfileForm(ModelForm):
             self.fields[field].widget.attrs['class'] = 'form-control'
             if self.fields[field].required:
                 self.fields[field].help_text = '*Required'
-        self.fields['type'].label = 'What type of user are you?'
         self.fields['broker'].label = 'Select a broker you wish to sign up'
+        self.fields['referral_code'].label = 'Referral code (Enter NONE if you don\'t have one)'

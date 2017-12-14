@@ -13,10 +13,10 @@
                         <a class="nav-link" href="#">Daily Results</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Investors</a>
+                        <a class="nav-link" href="{% url 'investors_index' %}">Investors</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sales</a>
+                        <a class="nav-link" href="{% url 'salesperson_index' %}">Sales</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Learn</a>
@@ -30,7 +30,7 @@
                             <i class="fa fa-user"></i> User
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="accountDropdown">
-                            <a class="dropdown-item" href="{% url 'user_home' %}">User Profile</a>
+                            <a class="dropdown-item" href="{% url 'user_home' %}">Account info</a>
                             <a class="dropdown-item" href="#">Contracts</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{% url 'user_logout' %}">

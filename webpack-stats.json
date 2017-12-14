@@ -6,66 +6,66 @@
       {
         "name": "user-e60c5351555d2e5bafb5.js",
         "publicPath": "/static/dist/user-e60c5351555d2e5bafb5.js",
-        "path": "/home/onhout/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.js"
+        "path": "/Users/pl/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.js"
       },
       {
         "name": "user-e60c5351555d2e5bafb5.css",
         "publicPath": "/static/dist/user-e60c5351555d2e5bafb5.css",
-        "path": "/home/onhout/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.css"
+        "path": "/Users/pl/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.css"
       },
       {
         "name": "user-e60c5351555d2e5bafb5.js.map",
         "publicPath": "/static/dist/user-e60c5351555d2e5bafb5.js.map",
-        "path": "/home/onhout/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.js.map"
+        "path": "/Users/pl/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.js.map"
       },
       {
         "name": "user-e60c5351555d2e5bafb5.css.map",
         "publicPath": "/static/dist/user-e60c5351555d2e5bafb5.css.map",
-        "path": "/home/onhout/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.css.map"
+        "path": "/Users/pl/Documents/wow88/static/dist/user-e60c5351555d2e5bafb5.css.map"
       }
     ],
     "main": [
       {
         "name": "main-e60c5351555d2e5bafb5.js",
         "publicPath": "/static/dist/main-e60c5351555d2e5bafb5.js",
-        "path": "/home/onhout/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.js"
+        "path": "/Users/pl/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.js"
       },
       {
         "name": "main-e60c5351555d2e5bafb5.css",
         "publicPath": "/static/dist/main-e60c5351555d2e5bafb5.css",
-        "path": "/home/onhout/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.css"
+        "path": "/Users/pl/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.css"
       },
       {
         "name": "main-e60c5351555d2e5bafb5.js.map",
         "publicPath": "/static/dist/main-e60c5351555d2e5bafb5.js.map",
-        "path": "/home/onhout/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.js.map"
+        "path": "/Users/pl/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.js.map"
       },
       {
         "name": "main-e60c5351555d2e5bafb5.css.map",
         "publicPath": "/static/dist/main-e60c5351555d2e5bafb5.css.map",
-        "path": "/home/onhout/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.css.map"
+        "path": "/Users/pl/Documents/wow88/static/dist/main-e60c5351555d2e5bafb5.css.map"
       }
     ],
     "vendor": [
       {
         "name": "vendor-e60c5351555d2e5bafb5.js",
         "publicPath": "/static/dist/vendor-e60c5351555d2e5bafb5.js",
-        "path": "/home/onhout/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.js"
+        "path": "/Users/pl/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.js"
       },
       {
         "name": "vendor-e60c5351555d2e5bafb5.css",
         "publicPath": "/static/dist/vendor-e60c5351555d2e5bafb5.css",
-        "path": "/home/onhout/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.css"
+        "path": "/Users/pl/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.css"
       },
       {
         "name": "vendor-e60c5351555d2e5bafb5.js.map",
         "publicPath": "/static/dist/vendor-e60c5351555d2e5bafb5.js.map",
-        "path": "/home/onhout/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.js.map"
+        "path": "/Users/pl/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.js.map"
       },
       {
         "name": "vendor-e60c5351555d2e5bafb5.css.map",
         "publicPath": "/static/dist/vendor-e60c5351555d2e5bafb5.css.map",
-        "path": "/home/onhout/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.css.map"
+        "path": "/Users/pl/Documents/wow88/static/dist/vendor-e60c5351555d2e5bafb5.css.map"
       }
     ]
   }
