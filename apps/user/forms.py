@@ -41,6 +41,8 @@ class UserForm(ModelForm):
         super(UserForm, self).__init__(*args, **kwargs)
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'form-control'
+            self.fields[field].widget.attrs['required'] = 'required'
+            self.fields[field].help_text = '*Required'
 
 
 class PasswordChangeCustomForm(PasswordChangeForm):
@@ -68,5 +70,5 @@ class SignupNextStep(ModelForm):
             self.fields[field].widget.attrs['class'] = 'form-control'
             if self.fields[field].required:
                 self.fields[field].help_text = '*Required'
-        self.fields['broker'].label = 'Select a broker you wish to sign up'
+        self.fields['broker'].label = 'Which broker do you have experience in'
         self.fields['referral_code'].label = 'Referral code (Enter NONE if you don\'t have one)'

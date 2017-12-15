@@ -9,6 +9,7 @@ module.exports = {
     entry: {
         main: ['main/js/main', 'main/scss/main.scss'],
         user: ['user/js/user', 'user/scss/user.scss'],
+        investors: ['investors/js/investors', 'investors/scss/investors.scss'],
         vendor: [
             'jquery',
             'jquery.easing',

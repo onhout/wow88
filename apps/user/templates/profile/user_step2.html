@@ -6,6 +6,20 @@
             <h2>Tell us a little bit about yourself.</h2>
             <form method="post" action="{% url 'user_next_step' %}">
                 {% csrf_token %}
+                <div class="row">
+                    {% for field in nameform %}
+                        <div class="form-group col">
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {% if field.help_text %}
+                                <small class="form-text text-muted">{{ field.help_text }}</small>
+                            {% endif %}
+                            {% for error in field.errors %}
+                                <small class="text-danger">{{ error }}</small>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
                 {% for field in signupnextstep %}
                     <div class="form-group">
                         {{ field.label_tag }}

@@ -1,0 +1,29 @@
+{% extends 'Global.html' %}
+{% load render_bundle from webpack_loader %}
+{% block title %}Investor Sign Up{% endblock %}
+{% block content %}
+    {% render_bundle 'investors' %}
+    <h1>IMPORTANT INFORMATION</h1>
+    <h4>Please accept our terms and conditions</h4>
+    {% include 'investors_terms.html' %}
+    <form method="post" action="{% url 'investors_signup' %}" id="investors-signup">
+        {% csrf_token %}
+        <div class="col-8 mx-auto">
+            {% for field in investorform %}
+                <div class="form-group">
+                    {{ field.label_tag }}
+                    {{ field }}
+                    {% if field.help_text %}
+                        <small class="form-text text-muted">{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <small class="text-danger">{{ error }}</small>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <button class="btn btn-primary" type="submit">
+                Continue
+            </button>
+        </div>
+    </form>
+{% endblock %}

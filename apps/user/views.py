@@ -3,7 +3,6 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from django.contrib.auth import logout as auth_logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
-from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, redirect
 
 from . import forms as user_forms
@@ -54,8 +53,7 @@ def user_register(request):
                         return redirect('user_home')
                     else:
                         return render(request, 'register.html', {'signupform': signupform})
-        else:
-            signupform = user_forms.SignUpForm()
+        signupform = user_forms.SignUpForm()
         return render(request, 'register.html', {'signupform': signupform})
 
 
@@ -70,23 +68,6 @@ def user_logout(request):
 def user_home(request):
     return render(request, 'home.html', {
     })
-
-
-@login_required
-def user_next_step(request):
-    if not request.user.profile.referral_code:
-        if request.method == 'POST':
-            signupnextstep = user_forms.SignupNextStep(request.POST, instance=request.user.profile)
-            if signupnextstep.is_valid():
-                signupnextstep.save()
-
-            if request.user.profile.potential:
-                return redirect('investors_signup')
-
-        signupnextstep = user_forms.SignupNextStep(instance=request.user.profile)
-        return render(request, 'profile/user_step2.html', {'signupnextstep': signupnextstep})
-    else:
-        raise PermissionDenied
 
 
 @login_required
@@ -108,3 +89,24 @@ def account_settings_password(request):
     else:
         form = password_form(request.user)
     return render(request, 'profile/password.html', {'form': form})
+
+
+@login_required
+def user_next_step(request):
+    if not request.user.profile.referral_code:
+        if request.method == 'POST':
+            signupnextstep = user_forms.SignupNextStep(request.POST, instance=request.user.profile)
+            if signupnextstep.is_valid():
+                signupnextstep.save()
+
+            if request.user.profile.potential:
+                return redirect('investors_signup')
+
+        signupnextstep = user_forms.SignupNextStep(instance=request.user.profile)
+        nameform = user_forms.UserForm(instance=request.user)
+        return render(request, 'profile/user_step2.html', {
+            'signupnextstep': signupnextstep,
+            'nameform': nameform
+        })
+    else:
+        return redirect('investors_index')

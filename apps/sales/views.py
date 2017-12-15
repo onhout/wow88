@@ -17,5 +17,5 @@ def salesperson_index(request):
 @login_required
 @user_referral_code_is_empty
 def salesperson_signup(request):
-    return render(request, 'salesperson_dashboard.html', {
+    return render(request, 'salesperson_signup.html', {
     })
