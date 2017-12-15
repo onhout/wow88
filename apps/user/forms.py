@@ -1,4 +1,4 @@
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, AdminPasswordChangeForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django.forms import ModelForm
 
@@ -32,13 +32,38 @@ class LoginForm(AuthenticationForm):
                 self.fields[field].help_text = '*Required'
 
 
-class ProfileForm(ModelForm):
+class UserForm(ModelForm):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name']
+
+    def __init__(self, *args, **kwargs):
+        super(UserForm, self).__init__(*args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'form-control'
+
+
+class PasswordChangeCustomForm(PasswordChangeForm):
+    def __init__(self, user, *args, **kwargs):
+        super(PasswordChangeCustomForm, self).__init__(user, *args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'form-control'
+
+
+class AdminPasswordChangeCustomForm(AdminPasswordChangeForm):
+    def __init__(self, user, *args, **kwargs):
+        super(AdminPasswordChangeCustomForm, self).__init__(user, *args, **kwargs)
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'form-control'
+
+
+class SignupNextStep(ModelForm):
     class Meta:
         model = Profile
         exclude = ['user', 'updated_at', 'profile_photo', 'type', 'potential']
 
     def __init__(self, *args, **kwargs):
-        super(ProfileForm, self).__init__(*args, **kwargs)
+        super(SignupNextStep, self).__init__(*args, **kwargs)
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'form-control'
             if self.fields[field].required:

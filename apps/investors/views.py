@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
-from apps.user.decorators import user_is_investor, user_profile_is_empty
+from apps.user.decorators import user_is_investor, user_referral_code_is_empty
 
 
 # Create your views here.
@@ -13,7 +13,7 @@ def investors_index(request):
 
 
 @login_required
-@user_profile_is_empty
+@user_referral_code_is_empty
 def investors_signup(request):
     return render(request, 'investors_dashboard.html', {
     })

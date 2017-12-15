@@ -1,12 +1,12 @@
 from django.shortcuts import redirect
 
 
-def user_profile_is_empty(function):
+def user_referral_code_is_empty(function):
     def wrap(request, *args, **kwargs):
         if request.user.profile.referral_code:
             return function(request, *args, **kwargs)  # this line means continue with the function
         else:
-            return redirect('user_profile')
+            return redirect('user_next_step')
 
     return wrap
 

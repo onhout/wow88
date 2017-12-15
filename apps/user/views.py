@@ -1,11 +1,13 @@
 import requests
+from django.contrib import messages
 from django.contrib.auth import login, authenticate
-from django.contrib.auth import logout as auth_logout
+from django.contrib.auth import logout as auth_logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, redirect
 
-from .decorators import user_profile_is_empty
-from .forms import SignUpForm, LoginForm, ProfileForm
+from . import forms as user_forms
+from .decorators import user_referral_code_is_empty
 
 
 # Create your views here.
@@ -15,7 +17,7 @@ def user_login(request):
         return redirect('user_home')
     else:
         if request.method == 'POST':
-            loginform = LoginForm(data=request.POST)
+            loginform = user_forms.LoginForm(data=request.POST)
             if loginform.is_valid():
                 username = loginform.cleaned_data.get('username')
                 raw_password = loginform.cleaned_data.get('password')
@@ -26,7 +28,7 @@ def user_login(request):
                 else:
                     return render(request, 'login.html', {'loginform': loginform})
         else:
-            loginform = LoginForm()
+            loginform = user_forms.LoginForm()
         return render(request, 'login.html', {'loginform': loginform})
 
 
@@ -41,7 +43,7 @@ def user_register(request):
                 "secret": "6LfIfDwUAAAAALRY0xoOCIFiPTdHHqD-avJ3M7EJ"
             })
             if r.json()['success'] is True:
-                signupform = SignUpForm(request.POST)
+                signupform = user_forms.SignUpForm(request.POST)
                 if signupform.is_valid():
                     signupform.save()
                     username = signupform.cleaned_data.get('username')
@@ -53,7 +55,7 @@ def user_register(request):
                     else:
                         return render(request, 'register.html', {'signupform': signupform})
         else:
-            signupform = SignUpForm()
+            signupform = user_forms.SignUpForm()
         return render(request, 'register.html', {'signupform': signupform})
 
 
@@ -64,21 +66,45 @@ def user_logout(request):
 
 
 @login_required
-@user_profile_is_empty
+@user_referral_code_is_empty
 def user_home(request):
     return render(request, 'home.html', {
     })
 
 
 @login_required
-def user_profile(request):
+def user_next_step(request):
+    if not request.user.profile.referral_code:
+        if request.method == 'POST':
+            signupnextstep = user_forms.SignupNextStep(request.POST, instance=request.user.profile)
+            if signupnextstep.is_valid():
+                signupnextstep.save()
+
+            if request.user.profile.potential:
+                return redirect('investors_signup')
+
+        signupnextstep = user_forms.SignupNextStep(instance=request.user.profile)
+        return render(request, 'profile/user_step2.html', {'signupnextstep': signupnextstep})
+    else:
+        raise PermissionDenied
+
+
+@login_required
+def account_settings_password(request):
+    if request.user.has_usable_password():
+        password_form = user_forms.PasswordChangeCustomForm
+    else:
+        password_form = user_forms.AdminPasswordChangeCustomForm
+
     if request.method == 'POST':
-        profileform = ProfileForm(request.POST, instance=request.user.profile)
-        if profileform.is_valid():
-            profileform.save()
-
-        if request.user.profile.potential:
-            return redirect('investors_signup')
-
-    profileform = ProfileForm(instance=request.user.profile)
-    return render(request, 'profile/profile.html', {'profileform': profileform})
+        form = password_form(request.user, request.POST)
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            messages.success(request, 'Your password was successfully updated!')
+            return redirect('user_settings_password')
+        else:
+            messages.error(request, 'Please correct the error below.')
+    else:
+        form = password_form(request.user)
+    return render(request, 'profile/password.html', {'form': form})
