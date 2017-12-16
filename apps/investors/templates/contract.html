@@ -1,0 +1,41 @@
+{% extends 'Global.html' %}
+{% block title %}Add a Contract{% endblock %}
+{% load render_bundle from webpack_loader %}
+{% block content %}
+    {% render_bundle 'investors' %}
+    <h1>Add a contract</h1>
+    <form method="post" action="{% url 'edit_contracts' %}" id="edit-contracts">
+        {% csrf_token %}
+        <div data-toggle="buttons">
+            <div class="row">
+                {% for field, text in contractform.contract.field.choices %}
+                    <div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12 contract-choices" style="padding-top: 5px;">
+                        <div class="card card-{{ field }}">
+                            <img class="card-img-top" src="https://placeimg.com/320/160/any" alt="">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ text }}</h4>
+                                <p class="card-text"></p>
+                                <div class="text-center">
+                                    <label class="btn btn-outline-info">
+                                        <input type="radio" autocomplete="off" name="contract" value="{{ field }}"
+                                                {% ifequal form.contract.data field.0 %}
+                                               checked="checked"
+                                                {% endifequal %}/> Select contract: {{ field }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <hr>
+        <button class="btn btn-primary btn-lg" type="submit">
+            Subscribe
+        </button>
+        {#        {% for field in contractform.contract %}#}
+        {#            {{ field }}#}
+        {#        {% endfor %}#}
+
+    </form>
+{% endblock %}

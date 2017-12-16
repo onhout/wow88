@@ -10,7 +10,7 @@
             Once you've received the approval letter from the broker that you've opened with, please verify the amount
             of initial investments you've deposited to the broker before continuing to the next step</p>
         <hr class="my-4">
-        <form method="post" action="{% url 'investors_signup' %}" id="investors-signup">
+        <form method="post" action="{% url 'investors_verify' %}" id="investors-verify">
             {% csrf_token %}
             <div class="col-8 mx-auto">
                 {% for field in investorform %}

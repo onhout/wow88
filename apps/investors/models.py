@@ -25,12 +25,26 @@ class Info(models.Model):
 
 class Contract(models.Model):
     CONTRACT_CHOICE = [
-        ('gc', 'GC'),
-        ('ng', 'NG'),
-        ('cl', 'CL'),
-        ('si', 'SI'),
-        ('hg', 'HG'),
-        ('andmore', 'AND MORE')
+        ('ZB', '30 Year Bond'),
+        ('ZF', '5 Year Note'),
+        ('ZN', '10 Year Note'),
+        ('6B', 'British Pound'),
+        ('6E', 'Euro'),
+        ('6J', 'Japanese Yen'),
+        ('ZC', 'Corn'),
+        ('ZL', 'Soybean Oil'),
+        ('ZM', 'Soymeal'),
+        ('ZS', 'Soybeans'),
+        ('ZW', 'Wheat'),
+        ('CL', 'Crude Oil'),
+        ('NG', 'Natural Gas'),
+        ('ES', 'S&P 500'),
+        ('NQ', 'Nasdaq 100'),
+        ('TF', 'Russell 2000'),
+        ('YM', 'Dow 500'),
+        ('GC', 'Gold'),
+        ('HG', 'Copper'),
+        ('SI', 'Silver'),
     ]
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='subscribed_contract')
     contract = models.CharField(max_length=25, choices=CONTRACT_CHOICE, blank=True, null=True)

@@ -44,10 +44,38 @@ def investor_verify(request):
                 investor = investor_info_form.save(commit=False)
                 investor.user = request.user
                 investor.save()
+                return redirect('add_new_contract')
 
         investor_info_form = investors_forms.VerifyAmountInvested(instance=request.user.investors_info)
-        return render(request, 'investor_verify.html', {
+        return render(request, 'investors_verify.html', {
             'investorform': investor_info_form
         })
     else:
         return redirect('investors_signup')
+
+
+@login_required
+@user_referral_code_is_empty
+def contract_form(request):
+    if request.user.investors_info.chosen_broker and request.user.investors_info.invest_amount:
+        contractform = investors_forms.CreateContractForm()
+        return render(request, 'contract.html', {
+            'contractform': contractform
+        })
+    else:
+        return redirect('investors_signup')
+
+
+@login_required
+@user_referral_code_is_empty
+def edit_contract(request):
+    if request.user.investors_info.chosen_broker and request.user.investors_info.invest_amount:
+        if request.method == 'POST':
+            contractform = investors_forms.CreateContractForm(request.POST)
+            if contractform.is_valid():
+                contract = contractform.save(commit=False)
+                contract.user = request.user
+                contract.save()
+                return redirect('add_new_contract')
+    else:
+        raise PermissionError
