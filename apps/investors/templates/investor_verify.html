@@ -1,0 +1,35 @@
+{% extends 'Global.html' %}
+{% load render_bundle from webpack_loader %}
+{% block title %}Investor Sign Up (Step 2){% endblock %}
+{% block content %}
+    {% render_bundle 'investors' %}
+
+    <div class="jumbotron">
+        <h1 class="display-3">Amount Verification</h1>
+        <p class="text-danger">
+            Once you've received the approval letter from the broker that you've opened with, please verify the amount
+            of initial investments you've deposited to the broker before continuing to the next step</p>
+        <hr class="my-4">
+        <form method="post" action="{% url 'investors_signup' %}" id="investors-signup">
+            {% csrf_token %}
+            <div class="col-8 mx-auto">
+                {% for field in investorform %}
+                    <div class="form-group">
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {% if field.help_text %}
+                            <small class="form-text text-muted">{{ field.help_text }}</small>
+                        {% endif %}
+                        {% for error in field.errors %}
+                            <small class="text-danger">{{ error }}</small>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+                <button class="btn btn-primary btn-lg" type="submit">
+                    Continue
+                </button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

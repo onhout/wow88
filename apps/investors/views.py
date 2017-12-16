@@ -1,5 +1,5 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from apps.user.decorators import user_is_investor, user_referral_code_is_empty
 from . import forms as investors_forms
@@ -16,12 +16,38 @@ def investors_index(request):
 @login_required
 @user_referral_code_is_empty
 def investors_signup(request):
-    if request.method == 'POST':
-        investor_info_form = investors_forms.ChooseBroker(request.POST, instance=request.user)
-        if investor_info_form.is_valid():
-            investor_info_form.save()
+    if not request.user.investors_info.chosen_broker:
+        if request.method == 'POST':
+            investor_info_form = investors_forms.ChooseBroker(request.POST, instance=request.user.investors_info)
+            if investor_info_form.is_valid():
+                investor = investor_info_form.save(commit=False)
+                investor.user = request.user
+                investor.save()
+                return redirect('investors_verify')
 
-    investor_info_form = investors_forms.ChooseBroker(instance=request.user)
-    return render(request, 'investors_signup.html', {
-        'investorform': investor_info_form
-    })
+        investor_info_form = investors_forms.ChooseBroker()
+        return render(request, 'investors_signup.html', {
+            'investorform': investor_info_form
+        })
+    else:
+        return redirect('investors_verify')
+
+
+@login_required
+@user_referral_code_is_empty
+def investor_verify(request):
+    if request.user.investors_info.chosen_broker:
+        if request.method == 'POST':
+            investor_info_form = investors_forms.VerifyAmountInvested(request.POST,
+                                                                      instance=request.user.investors_info)
+            if investor_info_form.is_valid():
+                investor = investor_info_form.save(commit=False)
+                investor.user = request.user
+                investor.save()
+
+        investor_info_form = investors_forms.VerifyAmountInvested(instance=request.user.investors_info)
+        return render(request, 'investor_verify.html', {
+            'investorform': investor_info_form
+        })
+    else:
+        return redirect('investors_signup')

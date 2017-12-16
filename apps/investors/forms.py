@@ -26,5 +26,5 @@ class VerifyAmountInvested(ModelForm):
         super(VerifyAmountInvested, self).__init__(*args, **kwargs)
         for field in self.fields:
             self.fields[field].widget.attrs['class'] = 'form-control'
-            self.fields['chosen_broker'].help_text = '*It must match the amount you\'ve invested with the broker'
-            self.fields['chosen_broker'].label = 'Please verify your investment amount'
+            self.fields['invest_amount'].help_text = '*It must match the amount you\'ve invested with the broker'
+            self.fields['invest_amount'].label = 'Please verify your investment amount (In dollar amount)'
