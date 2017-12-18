@@ -4,90 +4,90 @@
   "chunks": {
     "user": [
       {
-        "name": "user-930a8ee077295461cb76.js",
-        "publicPath": "/static/dist/user-930a8ee077295461cb76.js",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-930a8ee077295461cb76.js"
+        "name": "user-220ea9792e91cded3185.js",
+        "publicPath": "/static/dist/user-220ea9792e91cded3185.js",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-220ea9792e91cded3185.js"
       },
       {
-        "name": "user-930a8ee077295461cb76.css",
-        "publicPath": "/static/dist/user-930a8ee077295461cb76.css",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-930a8ee077295461cb76.css"
+        "name": "user-220ea9792e91cded3185.css",
+        "publicPath": "/static/dist/user-220ea9792e91cded3185.css",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-220ea9792e91cded3185.css"
       },
       {
-        "name": "user-930a8ee077295461cb76.js.map",
-        "publicPath": "/static/dist/user-930a8ee077295461cb76.js.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-930a8ee077295461cb76.js.map"
+        "name": "user-220ea9792e91cded3185.js.map",
+        "publicPath": "/static/dist/user-220ea9792e91cded3185.js.map",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-220ea9792e91cded3185.js.map"
       },
       {
-        "name": "user-930a8ee077295461cb76.css.map",
-        "publicPath": "/static/dist/user-930a8ee077295461cb76.css.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-930a8ee077295461cb76.css.map"
+        "name": "user-220ea9792e91cded3185.css.map",
+        "publicPath": "/static/dist/user-220ea9792e91cded3185.css.map",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-220ea9792e91cded3185.css.map"
       }
     ],
     "main": [
       {
-        "name": "main-930a8ee077295461cb76.js",
-        "publicPath": "/static/dist/main-930a8ee077295461cb76.js",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-930a8ee077295461cb76.js"
+        "name": "main-220ea9792e91cded3185.js",
+        "publicPath": "/static/dist/main-220ea9792e91cded3185.js",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-220ea9792e91cded3185.js"
       },
       {
-        "name": "main-930a8ee077295461cb76.css",
-        "publicPath": "/static/dist/main-930a8ee077295461cb76.css",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-930a8ee077295461cb76.css"
+        "name": "main-220ea9792e91cded3185.css",
+        "publicPath": "/static/dist/main-220ea9792e91cded3185.css",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-220ea9792e91cded3185.css"
       },
       {
-        "name": "main-930a8ee077295461cb76.js.map",
-        "publicPath": "/static/dist/main-930a8ee077295461cb76.js.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-930a8ee077295461cb76.js.map"
+        "name": "main-220ea9792e91cded3185.js.map",
+        "publicPath": "/static/dist/main-220ea9792e91cded3185.js.map",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-220ea9792e91cded3185.js.map"
       },
       {
-        "name": "main-930a8ee077295461cb76.css.map",
-        "publicPath": "/static/dist/main-930a8ee077295461cb76.css.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-930a8ee077295461cb76.css.map"
+        "name": "main-220ea9792e91cded3185.css.map",
+        "publicPath": "/static/dist/main-220ea9792e91cded3185.css.map",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-220ea9792e91cded3185.css.map"
       }
     ],
     "investors": [
       {
-        "name": "investors-930a8ee077295461cb76.js",
-        "publicPath": "/static/dist/investors-930a8ee077295461cb76.js",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-930a8ee077295461cb76.js"
+        "name": "investors-220ea9792e91cded3185.js",
+        "publicPath": "/static/dist/investors-220ea9792e91cded3185.js",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-220ea9792e91cded3185.js"
       },
       {
-        "name": "investors-930a8ee077295461cb76.css",
-        "publicPath": "/static/dist/investors-930a8ee077295461cb76.css",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-930a8ee077295461cb76.css"
+        "name": "investors-220ea9792e91cded3185.css",
+        "publicPath": "/static/dist/investors-220ea9792e91cded3185.css",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-220ea9792e91cded3185.css"
       },
       {
-        "name": "investors-930a8ee077295461cb76.js.map",
-        "publicPath": "/static/dist/investors-930a8ee077295461cb76.js.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-930a8ee077295461cb76.js.map"
+        "name": "investors-220ea9792e91cded3185.js.map",
+        "publicPath": "/static/dist/investors-220ea9792e91cded3185.js.map",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-220ea9792e91cded3185.js.map"
       },
       {
-        "name": "investors-930a8ee077295461cb76.css.map",
-        "publicPath": "/static/dist/investors-930a8ee077295461cb76.css.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-930a8ee077295461cb76.css.map"
+        "name": "investors-220ea9792e91cded3185.css.map",
+        "publicPath": "/static/dist/investors-220ea9792e91cded3185.css.map",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-220ea9792e91cded3185.css.map"
       }
     ],
     "vendor": [
       {
-        "name": "vendor-930a8ee077295461cb76.js",
-        "publicPath": "/static/dist/vendor-930a8ee077295461cb76.js",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-930a8ee077295461cb76.js"
+        "name": "vendor-220ea9792e91cded3185.js",
+        "publicPath": "/static/dist/vendor-220ea9792e91cded3185.js",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-220ea9792e91cded3185.js"
       },
       {
-        "name": "vendor-930a8ee077295461cb76.css",
-        "publicPath": "/static/dist/vendor-930a8ee077295461cb76.css",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-930a8ee077295461cb76.css"
+        "name": "vendor-220ea9792e91cded3185.css",
+        "publicPath": "/static/dist/vendor-220ea9792e91cded3185.css",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-220ea9792e91cded3185.css"
       },
       {
-        "name": "vendor-930a8ee077295461cb76.js.map",
-        "publicPath": "/static/dist/vendor-930a8ee077295461cb76.js.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-930a8ee077295461cb76.js.map"
+        "name": "vendor-220ea9792e91cded3185.js.map",
+        "publicPath": "/static/dist/vendor-220ea9792e91cded3185.js.map",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-220ea9792e91cded3185.js.map"
       },
       {
-        "name": "vendor-930a8ee077295461cb76.css.map",
-        "publicPath": "/static/dist/vendor-930a8ee077295461cb76.css.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-930a8ee077295461cb76.css.map"
+        "name": "vendor-220ea9792e91cded3185.css.map",
+        "publicPath": "/static/dist/vendor-220ea9792e91cded3185.css.map",
+        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-220ea9792e91cded3185.css.map"
       }
     ]
   }

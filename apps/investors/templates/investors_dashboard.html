@@ -1,4 +1,17 @@
 {% extends 'Global.html' %}
+{% block title %}Investors Dashboard{% endblock %}
 {% block content %}
-    INVESTORS
+    <div class="card text-center">
+        <div class="card-header">
+            <h2>Welcome {{ request.user.get_full_name }}</h2>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Signed up with {{ investor_info.chosen_broker | upper }}</h4>
+            <p class="card-text">Investment amount: ${{ investor_info.invest_amount }}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+            Member since {{ investor_info.signup_date | date }}
+        </div>
+    </div>
 {% endblock %}
