@@ -10,6 +10,7 @@ module.exports = {
         main: ['main/js/main', 'main/scss/main.scss'],
         user: ['user/js/user', 'user/scss/user.scss'],
         investors: ['investors/js/investors', 'investors/scss/investors.scss'],
+        sales: ['sales/js/sales', 'sales/scss/sales.scss'],
         vendor: [
             'jquery',
             'jquery.easing',

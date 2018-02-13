@@ -4,90 +4,112 @@
   "chunks": {
     "user": [
       {
-        "name": "user-220ea9792e91cded3185.js",
-        "publicPath": "/static/dist/user-220ea9792e91cded3185.js",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-220ea9792e91cded3185.js"
+        "name": "user-3907464eaa855f8f14be.js",
+        "publicPath": "/static/dist/user-3907464eaa855f8f14be.js",
+        "path": "/Users/pl/Documents/wow88/static/dist/user-3907464eaa855f8f14be.js"
       },
       {
-        "name": "user-220ea9792e91cded3185.css",
-        "publicPath": "/static/dist/user-220ea9792e91cded3185.css",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-220ea9792e91cded3185.css"
+        "name": "user-3907464eaa855f8f14be.css",
+        "publicPath": "/static/dist/user-3907464eaa855f8f14be.css",
+        "path": "/Users/pl/Documents/wow88/static/dist/user-3907464eaa855f8f14be.css"
       },
       {
-        "name": "user-220ea9792e91cded3185.js.map",
-        "publicPath": "/static/dist/user-220ea9792e91cded3185.js.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-220ea9792e91cded3185.js.map"
+        "name": "user-3907464eaa855f8f14be.js.map",
+        "publicPath": "/static/dist/user-3907464eaa855f8f14be.js.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/user-3907464eaa855f8f14be.js.map"
       },
       {
-        "name": "user-220ea9792e91cded3185.css.map",
-        "publicPath": "/static/dist/user-220ea9792e91cded3185.css.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\user-220ea9792e91cded3185.css.map"
+        "name": "user-3907464eaa855f8f14be.css.map",
+        "publicPath": "/static/dist/user-3907464eaa855f8f14be.css.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/user-3907464eaa855f8f14be.css.map"
+      }
+    ],
+    "sales": [
+      {
+        "name": "sales-3907464eaa855f8f14be.js",
+        "publicPath": "/static/dist/sales-3907464eaa855f8f14be.js",
+        "path": "/Users/pl/Documents/wow88/static/dist/sales-3907464eaa855f8f14be.js"
+      },
+      {
+        "name": "sales-3907464eaa855f8f14be.css",
+        "publicPath": "/static/dist/sales-3907464eaa855f8f14be.css",
+        "path": "/Users/pl/Documents/wow88/static/dist/sales-3907464eaa855f8f14be.css"
+      },
+      {
+        "name": "sales-3907464eaa855f8f14be.js.map",
+        "publicPath": "/static/dist/sales-3907464eaa855f8f14be.js.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/sales-3907464eaa855f8f14be.js.map"
+      },
+      {
+        "name": "sales-3907464eaa855f8f14be.css.map",
+        "publicPath": "/static/dist/sales-3907464eaa855f8f14be.css.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/sales-3907464eaa855f8f14be.css.map"
       }
     ],
     "main": [
       {
-        "name": "main-220ea9792e91cded3185.js",
-        "publicPath": "/static/dist/main-220ea9792e91cded3185.js",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-220ea9792e91cded3185.js"
+        "name": "main-3907464eaa855f8f14be.js",
+        "publicPath": "/static/dist/main-3907464eaa855f8f14be.js",
+        "path": "/Users/pl/Documents/wow88/static/dist/main-3907464eaa855f8f14be.js"
       },
       {
-        "name": "main-220ea9792e91cded3185.css",
-        "publicPath": "/static/dist/main-220ea9792e91cded3185.css",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-220ea9792e91cded3185.css"
+        "name": "main-3907464eaa855f8f14be.css",
+        "publicPath": "/static/dist/main-3907464eaa855f8f14be.css",
+        "path": "/Users/pl/Documents/wow88/static/dist/main-3907464eaa855f8f14be.css"
       },
       {
-        "name": "main-220ea9792e91cded3185.js.map",
-        "publicPath": "/static/dist/main-220ea9792e91cded3185.js.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-220ea9792e91cded3185.js.map"
+        "name": "main-3907464eaa855f8f14be.js.map",
+        "publicPath": "/static/dist/main-3907464eaa855f8f14be.js.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/main-3907464eaa855f8f14be.js.map"
       },
       {
-        "name": "main-220ea9792e91cded3185.css.map",
-        "publicPath": "/static/dist/main-220ea9792e91cded3185.css.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\main-220ea9792e91cded3185.css.map"
+        "name": "main-3907464eaa855f8f14be.css.map",
+        "publicPath": "/static/dist/main-3907464eaa855f8f14be.css.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/main-3907464eaa855f8f14be.css.map"
       }
     ],
     "investors": [
       {
-        "name": "investors-220ea9792e91cded3185.js",
-        "publicPath": "/static/dist/investors-220ea9792e91cded3185.js",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-220ea9792e91cded3185.js"
+        "name": "investors-3907464eaa855f8f14be.js",
+        "publicPath": "/static/dist/investors-3907464eaa855f8f14be.js",
+        "path": "/Users/pl/Documents/wow88/static/dist/investors-3907464eaa855f8f14be.js"
       },
       {
-        "name": "investors-220ea9792e91cded3185.css",
-        "publicPath": "/static/dist/investors-220ea9792e91cded3185.css",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-220ea9792e91cded3185.css"
+        "name": "investors-3907464eaa855f8f14be.css",
+        "publicPath": "/static/dist/investors-3907464eaa855f8f14be.css",
+        "path": "/Users/pl/Documents/wow88/static/dist/investors-3907464eaa855f8f14be.css"
       },
       {
-        "name": "investors-220ea9792e91cded3185.js.map",
-        "publicPath": "/static/dist/investors-220ea9792e91cded3185.js.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-220ea9792e91cded3185.js.map"
+        "name": "investors-3907464eaa855f8f14be.js.map",
+        "publicPath": "/static/dist/investors-3907464eaa855f8f14be.js.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/investors-3907464eaa855f8f14be.js.map"
       },
       {
-        "name": "investors-220ea9792e91cded3185.css.map",
-        "publicPath": "/static/dist/investors-220ea9792e91cded3185.css.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\investors-220ea9792e91cded3185.css.map"
+        "name": "investors-3907464eaa855f8f14be.css.map",
+        "publicPath": "/static/dist/investors-3907464eaa855f8f14be.css.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/investors-3907464eaa855f8f14be.css.map"
       }
     ],
     "vendor": [
       {
-        "name": "vendor-220ea9792e91cded3185.js",
-        "publicPath": "/static/dist/vendor-220ea9792e91cded3185.js",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-220ea9792e91cded3185.js"
+        "name": "vendor-3907464eaa855f8f14be.js",
+        "publicPath": "/static/dist/vendor-3907464eaa855f8f14be.js",
+        "path": "/Users/pl/Documents/wow88/static/dist/vendor-3907464eaa855f8f14be.js"
       },
       {
-        "name": "vendor-220ea9792e91cded3185.css",
-        "publicPath": "/static/dist/vendor-220ea9792e91cded3185.css",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-220ea9792e91cded3185.css"
+        "name": "vendor-3907464eaa855f8f14be.css",
+        "publicPath": "/static/dist/vendor-3907464eaa855f8f14be.css",
+        "path": "/Users/pl/Documents/wow88/static/dist/vendor-3907464eaa855f8f14be.css"
       },
       {
-        "name": "vendor-220ea9792e91cded3185.js.map",
-        "publicPath": "/static/dist/vendor-220ea9792e91cded3185.js.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-220ea9792e91cded3185.js.map"
+        "name": "vendor-3907464eaa855f8f14be.js.map",
+        "publicPath": "/static/dist/vendor-3907464eaa855f8f14be.js.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/vendor-3907464eaa855f8f14be.js.map"
       },
       {
-        "name": "vendor-220ea9792e91cded3185.css.map",
-        "publicPath": "/static/dist/vendor-220ea9792e91cded3185.css.map",
-        "path": "C:\\Users\\pl\\Documents\\GitHub\\wow88\\static\\dist\\vendor-220ea9792e91cded3185.css.map"
+        "name": "vendor-3907464eaa855f8f14be.css.map",
+        "publicPath": "/static/dist/vendor-3907464eaa855f8f14be.css.map",
+        "path": "/Users/pl/Documents/wow88/static/dist/vendor-3907464eaa855f8f14be.css.map"
       }
     ]
   }

@@ -1,6 +1,18 @@
 {% extends 'Global.html' %}
+{% load render_bundle from webpack_loader %}
+{% block title %}Sales Signup{% endblock %}
 {% block content %}
+    {% render_bundle 'sales' %}
     <h1>IMPORTANT INFORMATION</h1>
     <h4>Please accept our terms and conditions</h4>
     {% include 'salesperson_terms.html' %}
+    <form class="text-center">
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="salesContractCheck">
+            <label class="form-check-label text-uppercase font-weight-bold" for="salesContractCheck">I agree to the
+                above contract and receive 1099 IRS form</label>
+        </div>
+        <button type="submit" class="btn btn-primary salesContractCheckBtn" disabled>Next</button>
+        <button type="button" class="btn btn-danger">Cancel</button>
+    </form>
 {% endblock %}

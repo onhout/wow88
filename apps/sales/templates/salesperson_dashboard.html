@@ -1,4 +1,7 @@
 {% extends 'Global.html' %}
+{% load render_bundle from webpack_loader %}
+{% block title %}Sales Dashboard{% endblock %}
 {% block content %}
+    {% render_bundle 'sales' %}
     salesperson
 {% endblock %}
