@@ -10,6 +10,10 @@ from .decorators import user_referral_code_is_empty
 
 
 # Create your views here.
+@login_required
+def contactus(request):
+    return render(request, 'full_contact.html')
+
 
 def user_login(request):
     if request.user.is_authenticated and not request.user.is_anonymous:
