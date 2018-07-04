@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^sales/', include('apps.sales.urls')),
     url(r'^investors/', include('apps.investors.urls')),
     url('', include('social.apps.django_app.urls', namespace='social')),
-    url('', include('django.contrib.auth.urls', namespace='auth')),
+    url('^', include('django.contrib.auth.urls')),
 ]
